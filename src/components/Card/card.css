@@ -1,0 +1,96 @@
+
+.container {
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    transform: translate(-50%);
+    left: 50%;
+}
+
+.card-front-container {
+    background-image: url('/src/assets/bg-card-front.jpg');
+    width: 360px;
+    height: 200px;
+    position: relative;
+    display: flex;
+    padding: 0 22px;
+    align-items: center;
+    margin-right: 50px;
+    border-radius: 12px;
+    margin-bottom: 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-number-container {
+    position: absolute;
+    bottom: 60px;
+}
+
+.card-number-container span {
+    color: #FFF;
+    font-size: 22px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.card-owner {
+    position: absolute;
+    bottom: 20px;
+}
+
+.card-owner span {
+    color: #FFF;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.validade-input-container {
+    display: flex;
+}
+
+.validade {
+    position: absolute;
+    right: 0;
+    padding-right: 22px;
+    bottom: 20px;
+    
+}
+
+.validade span {
+    color: #FFF;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.card-back-container {
+    background-image: url("/src/assets/bg-card-back.png");
+    width: 360px;
+    height: 220px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+    border-radius: 12px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 8px 8px 8px rgb(48, 48, 48);
+    margin-left: 80px;
+}
+
+.card-cvc  span {
+    color: #FFF;
+    font-size: 18px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
