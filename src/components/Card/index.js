@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './card.css'
 
 
@@ -11,13 +11,17 @@ function Card() {
     const [cvc, setCvc] = useState('000');
 
     function submitInfo() {
-        cardNumber !== '' ? alert('foi') : alert('Preencha o campo!!');
+        
     }
 
     return (
         <div className='container'>
             <div className='card-container'>
                 <div className='card-front-container'>
+                    <div className='simbol-card-container'>
+                        <span className='simbol-card-yellow'></span>
+                        <span className='simbol-card-white'></span>
+                    </div>
                     <div className='card-number-container'>
                         <span>{cardNumber}</span>
                     </div>
@@ -35,7 +39,6 @@ function Card() {
                         </div>
                     </div>
                 </div>
-
             </div>
 
             <form onSubmit={submitInfo}>
@@ -54,29 +57,27 @@ function Card() {
                         <label>Validade (MM/AA)</label>
                         <div className='validade-input-container'>
                             <input onChange={(e) => { setCardMonth(e.target.value) }}
-                                className='input-month'
+                                className='input-validade input-month'
                                 type='text' placeholder='MM'
                                 maxLength={2}
                             />
                             <input onChange={(e) => { setCardYear(e.target.value) }}
-                                className='input-year'
+                                className='input-validade input-year'
                                 type='text' placeholder='YY'
                                 maxLength={2}
                             />
-                            <div className='cvc-container'>
-                            <label>CVC</label>
-                            <input onChange={(e) => { setCvc(e.target.value) }}
-                                className='input-cvc'
-                                type='text' placeholder='CVC'
-                                maxLength={3}
-                                />
-                            </div>
                         </div>
                     </div>
-
+                    <div className='cvc-container'>
+                        <label>CVC</label>
+                        <input onChange={(e) => { setCvc(e.target.value) }}
+                            className='input-cvc'
+                            type='text' placeholder='CVC'
+                            maxLength={3}
+                        />
+                    </div>
                 </div>
-
-                <button type='submit'>Submit</button>
+                <button className='btn-submit' type='submit'>Confirmar</button>
             </form>
         </div>
     )
