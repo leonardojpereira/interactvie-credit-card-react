@@ -46,11 +46,13 @@ function Card() {
                 <input onChange={(e) => { setCardNumber(e.target.value) }}
                     className='input-name'
                     type='text' placeholder='e.g. 9999-8888-7777-0000'
+                    maxLength={22}
                 />
                 <label>Nome do titular</label>
                 <input onChange={(e) => { setCardOwner(e.target.value) }}
                     className='input-owner'
                     type='text' placeholder='e.g. Leonardo B. Silva'
+                    maxLength={24}
                 />
                 <div className='second-column'>
                     <div className='validade-container'>

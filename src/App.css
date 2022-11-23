@@ -1,5 +1,5 @@
 .background {
-    width: 38vw;
+    width: 40vw;
     height: 100vh;
     background-image: url('/src/assets/abstract-gradient-neon-lights_23-2149279137.jpeg.webp');
     position: relative;
@@ -7,4 +7,19 @@
     background-repeat: no-repeat;
     background-size: cover;
     transform: rotate(180deg);
+}
+
+/* media query */
+
+@media screen and (max-width: 1000px) {
+    .background {
+        width: 100%;
+        height: 16vh;
+    }
+}
+
+@media screen and (max-width: 550px)  {
+    .background {
+        height: 15vh;
+    }
 }
