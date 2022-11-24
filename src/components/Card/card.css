@@ -118,6 +118,7 @@
 form {
     display: flex;
     flex-direction: column;
+    margin-bottom: 150px;
 }
 
 .second-column {
@@ -239,6 +240,10 @@ input {
 
     .input-cvc {
         width: 100%;
+    }
+
+    form {
+        margin-bottom: 50px;
     }
 
 }
