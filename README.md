@@ -25,7 +25,7 @@ Feto em ReactJS, com o objetivo de praticar os conceitos do Hook useState().
 ## :link: Deploy
 
 ```
-EM BREVE
+https://creditcard.netlify.app/
 ```
 
 ⌨️ with ❤️ by [Leonardo Barbosa](https://github.com/leonardojpereira) 😊
