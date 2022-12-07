@@ -162,12 +162,13 @@ input {
     border-radius: 5px;
     text-transform: uppercase;
     cursor: pointer;
-    transition: all 0.4s;
 }
 
-.btn-submit:hover {
-    background: linear-gradient(to right, #67478b, #6cafd8);
+.errorMessage {
+    color: red;
+    margin-top: 12px;
 }
+
 
 /* media query */
 

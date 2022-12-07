@@ -1,5 +1,8 @@
 import Card from './components/Card';
 import './App.css';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Icons from './components/Icons'
 
 
 function App() {
@@ -7,6 +10,8 @@ function App() {
       <div>
         <div className='background'/>
         <Card/>
+        <Icons/>
+        <ToastContainer />
       </div>
   );
 }
