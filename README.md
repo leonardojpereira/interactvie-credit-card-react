@@ -1,5 +1,4 @@
-![react_project_print](https://user-images.githubusercontent.com/87662269/204566484-e315b90b-d331-458e-b386-bdeb979b23f6.PNG)
-
+![print_project](https://user-images.githubusercontent.com/87662269/206243681-dd80ff4d-4dcd-4f6e-8cc2-b79db98d3140.PNG)
 
 <h1 align="center">
  INTERACTIVE CREDIT CARD :credit_card:
