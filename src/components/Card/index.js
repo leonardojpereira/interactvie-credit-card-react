@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { toast } from 'react-toastify';
 import './card.css';
 
@@ -11,6 +11,19 @@ function Card() {
     const [cardYear, setCardYear] = useState('00');
     const [cvc, setCvc] = useState('000');
     const [error, setError] = useState('');
+    const inputCard = useRef();
+
+    function onChangeNumber() {
+        const cardValue = inputCard.current.value
+            .replace(/\D/g, '')
+            .match(/(\d{0,4})(\d{0,4})(\d{0,4})(\d{0,4})/);
+        inputCard.current.value = !cardValue[2]
+            ? cardValue[1]
+            : `${cardValue[1]} ${cardValue[2]}${`${cardValue[3] ? ` ${cardValue[3]}` : ''
+            }`}${`${cardValue[4] ? ` ${cardValue[4]}` : ''}`}`;
+        setCardNumber(inputCard.current.value);
+    }
+
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -59,7 +72,9 @@ function Card() {
 
             <form onSubmit={handleSubmit}>
                 <label>Número do cartão</label>
-                <input onChange={(e) => { setCardNumber(e.target.value)}}
+                <input
+                    ref={inputCard}
+                    onChange={onChangeNumber}
                     required
                     className='input-name'
                     type='text' placeholder='e.g. 9999-8888-7777-0000'
@@ -104,7 +119,7 @@ function Card() {
                             type='text' placeholder='CVC'
                             maxLength={3}
                         />
-                     
+
                     </div>
                 </div>
                 <button className='btn-submit' type='submit'>Confirmar</button>
